@@ -1,9 +1,15 @@
 # ----------------------------------------------------------------------
+# Premininaries
+# ----------------------------------------------------------------------
+
+PLATFORM=`uname`
+
+# ----------------------------------------------------------------------
 # General Bash settings
 # ----------------------------------------------------------------------
 
 # don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
 export HISTIGNORE="ls:bg:fg:date:clear:c:history:h"
 
 # check the window size after each command and, if necessary, update
@@ -25,6 +31,7 @@ alias "cd..=cd .."
 alias "cd...=cd ../.."
 alias "sb=source ~/.bashrc"
 alias "v=mvim"
+alias "s=subl"
 
 
 # ----------------------------------------------------------------------
@@ -40,14 +47,18 @@ PATH="/usr/local/bin:/opt/local/bin:$PATH"
 # Pager, Editor, and More
 # ----------------------------------------------------------------------
 
-# See what we have to work with ...
-HAVE_VIM=$(command -v vim)
-HAVE_GVIM=$(command -v gvim)
+if [ "$PLATFORM" == 'Darwin' ]; then
+  EDITOR="~/bin/subl -w"
+else
+  # See what we have to work with ...
+  HAVE_VIM=$(command -v vim)
+  HAVE_GVIM=$(command -v gvim)
 
-# EDITOR
-test -n "$HAVE_VIM" &&
-EDITOR=vim ||
-EDITOR=vi
+  # EDITOR
+  test -n "$HAVE_VIM" &&
+  EDITOR=vim ||
+  EDITOR=vi
+fi
 export EDITOR
 
 # PAGER
@@ -74,13 +85,13 @@ export LSCOLORS=DxFxCxCxBxexexBxBxDxDx
 
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "("${ref#refs/heads/}") "  
+  echo "("${ref#refs/heads/}") "
 }
 
-RED="\[\033[0;31m\]" 
-YELLOW="\[\033[0;33m\]" 
-GREEN="\[\033[0;32m\]" 
-WHITE="\[\033[0;11m\]" 
+RED="\[\033[0;31m\]"
+YELLOW="\[\033[0;33m\]"
+GREEN="\[\033[0;32m\]"
+WHITE="\[\033[0;11m\]"
 PS1="$RED\h \A [\w] $YELLOW\$(parse_git_branch)$RED\$ $WHITE"
 
 
