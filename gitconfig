@@ -31,5 +31,3 @@
 	keepBackup = true
 [help]
 	autocorrect = 1
-[merge]
-	ff = false
