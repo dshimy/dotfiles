@@ -106,7 +106,7 @@ PS1="$RED\h \A [\w] $YELLOW\$(parse_git_branch)$RED\$ $WHITE"
 # ----------------------------------------------------------------------
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-PATH=$PATH:$HOME/.rvm/bin
+PATH=$HOME/.rvm/bin:$PATH
 
 function gemdir {
   if [[ -z "$1" ]] ; then
