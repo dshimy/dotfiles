@@ -31,16 +31,16 @@ alias "cd..=cd .."
 alias "cd...=cd ../.."
 alias "sb=source ~/.bashrc"
 alias "v=mvim"
-alias "s=subl"
+alias "s=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 
 # ----------------------------------------------------------------------
 # Path
 # ----------------------------------------------------------------------
 
-PATH="~/bin:$PATH"
-PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
-PATH="/usr/local/bin:/opt/local/bin:$PATH"
+PATH="~/bin:/bin:/usr/bin:/usr/local/bin:/opt/local/bin:$PATH"
+PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
+PATH="$PATH:/usr/local/mysql/bin"
 
 
 # ----------------------------------------------------------------------
@@ -48,7 +48,7 @@ PATH="/usr/local/bin:/opt/local/bin:$PATH"
 # ----------------------------------------------------------------------
 
 if [ "$PLATFORM" == 'Darwin' ]; then
-  EDITOR="~/bin/subl -w"
+  EDITOR="mvim -w"
 else
   # See what we have to work with ...
   HAVE_VIM=$(command -v vim)
