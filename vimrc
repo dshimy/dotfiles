@@ -52,8 +52,8 @@ nnoremap <leader><space> :noh<cr>
 map  <leader>c :close<cr> 
 
 "" navigate the buffer list
-map b :bp<cr>
-map n :bn<cr>
+map b :bn<cr>
+map B :bp<cr>
 
 "" easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -73,3 +73,7 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
 
+" local configuration
+if filereadable(expand("~/.vimlocal"))
+  source $HOME/.vimlocal
+endif
