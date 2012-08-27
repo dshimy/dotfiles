@@ -38,7 +38,7 @@ alias "s=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 # Path
 # ----------------------------------------------------------------------
 
-PATH="~/bin:/bin:/usr/bin:/usr/local/bin:/opt/local/bin:$PATH"
+PATH="/home/dshimy/bin:/bin:/usr/bin:/usr/local/bin:/opt/local/bin:$PATH"
 PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
 PATH="$PATH:/usr/local/mysql/bin"
 
