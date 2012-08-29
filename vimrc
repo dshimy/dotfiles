@@ -2,6 +2,7 @@ set nocompatible
 
 "" enable loading of VIM bundles
 call pathogen#infect() 
+call pathogen#helptags()
 
 set number                      " add line numbers
 syntax enable                   " enable syntax coloring
@@ -36,6 +37,11 @@ set nobackup                    " we don't need backup files
 set noswapfile                  " we don't need swap files either
 
 set wildignore+=*.o,*.obj,.git,.svn,log/**,tmp/**
+
+"" Map Command-S to save file
+"" This requires mapping the CMD-s key in iTerm to the Hex 0x1b 0x4f 0x51
+imap <F2> <C-o>:w<CR>
+map  <F2> :w<CR>
 
 " Remember last location in file, but not for commit messages.
 " see :help last-position-jump

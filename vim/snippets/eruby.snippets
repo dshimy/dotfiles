@@ -2,23 +2,17 @@ snippet if
 	<% if ${1:condition} -%>
 	  ${2}
 	<% end -%>
-
 snippet else
 	<% else -%>
-
 snippet link
 	<%= link_to ${1:title}, ${2:path} %>
-
 snippet do
 	do |${1}| %>
 	  ${2}
 	<% end -%>
-
 snippet end
 	<% end -%>
-
-snippet ..
+snippet =
 	<%= ${1} %>
-
 snippet .
 	<% ${1} %>
