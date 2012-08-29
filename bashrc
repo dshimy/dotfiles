@@ -48,16 +48,10 @@ PATH="$PATH:/usr/local/mysql/bin"
 # ----------------------------------------------------------------------
 
 if [ "$PLATFORM" == 'Darwin' ]; then
-  EDITOR="mvim -w"
+  # EDITOR="mvim -w"
+  EDITOR="vim"
 else
-  # See what we have to work with ...
-  HAVE_VIM=$(command -v vim)
-  HAVE_GVIM=$(command -v gvim)
-
-  # EDITOR
-  test -n "$HAVE_VIM" &&
-  EDITOR=vim ||
-  EDITOR=vi
+  EDITOR="vim"
 fi
 export EDITOR
 
