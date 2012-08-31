@@ -16,6 +16,7 @@ set nofoldenable                " disable code folding
 set gfn=Monaco:h12
 set background=light
 colorscheme solarized
+set shortmess+=I
 
 "" Whitespace
 set nowrap                      " don't wrap lines

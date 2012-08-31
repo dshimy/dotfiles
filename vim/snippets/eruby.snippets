@@ -9,10 +9,34 @@ snippet link
 snippet do
 	do |${1}| %>
 	  ${2}
-	<% end -%>
+	<% end
 snippet end
 	<% end -%>
 snippet =
 	<%= ${1} %>
 snippet .
 	<% ${1} %>
+snippet html
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <title>${1:title}</title>
+	</head>
+	<body>
+	  ${2}
+	</body>
+	</html>
+snippet jquery
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+snippet p
+	<p>${1}</p>
+snippet span
+	<span class="${1:classname}">${2}</span>
+snippet div
+	<div class="${1:classname}">${2}</div>
+snippet li
+	<li>${1}</li>
+snippet ul
+	<ul>
+	  ${1}
+	</ul>
