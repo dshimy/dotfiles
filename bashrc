@@ -31,7 +31,6 @@ alias "cd..=cd .."
 alias "cd...=cd ../.."
 alias "sb=source ~/.bashrc"
 alias "v=mvim"
-alias "s=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 
 # ----------------------------------------------------------------------
