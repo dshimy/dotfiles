@@ -14,8 +14,9 @@ set nofoldenable                " disable code folding
 
 "" Appearance (font and colors)
 set gfn=Monaco:h12
-set background=light
-colorscheme solarized
+" set background=light
+" colorscheme solarized
+colorscheme Tomorrow-Night-Bright
 set shortmess+=I
 
 "" Whitespace
