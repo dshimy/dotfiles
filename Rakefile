@@ -1,3 +1,5 @@
+task :default => [:install]
+
 desc "Install dotfiles"
 task :install do
   puts "Installing dotfiles..."
