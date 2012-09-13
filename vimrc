@@ -25,6 +25,10 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
+"" Start the status line
+set laststatus=2
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)              
+
 "" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
