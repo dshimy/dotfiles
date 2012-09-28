@@ -4,7 +4,13 @@ set nocompatible
 call pathogen#infect() 
 call pathogen#helptags()
 
-set number                      " add line numbers
+"" line numbers
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+set relativenumber 
+
 syntax enable                   " enable syntax coloring
 set encoding=utf-8              " set file encoding
 set showcmd                     " display incomplete commands
