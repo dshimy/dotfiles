@@ -5,18 +5,17 @@ call pathogen#infect()
 call pathogen#helptags()
 
 "" line numbers
+set relativenumber 
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
-set relativenumber 
 
 syntax enable                   " enable syntax coloring
 set encoding=utf-8              " set file encoding
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 set hidden                      " make background buffers work
-set nofoldenable                " disable code folding
 
 "" Appearance (font and colors)
 set gfn=Monaco:h12
@@ -63,21 +62,27 @@ au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= l
 "" switch to the last buffer
 nnoremap <leader><leader> <c-^>
 
-"" clear the last serach
+"" Clear the last serach
 nnoremap <leader><space> :noh<cr>
 
-"" close the current buffer
-map  <leader>c :close<cr> 
+"" Close the current buffer
+map <leader>c :close<cr> 
 
-"" navigate the buffer list
+"" Navigate the buffer list
 map b :bn<cr>
 map B :bp<cr>
 
-"" easier navigation between split windows
+"" Easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+"" Code folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
 
 "" ZoomWin
 map <leader>z <c-w>o
@@ -90,6 +95,16 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
+
+" Disable those handy arrow keys
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
 
 " local configuration
 if filereadable(expand("~/.vimlocal"))
