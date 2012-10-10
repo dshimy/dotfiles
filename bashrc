@@ -18,6 +18,9 @@ shopt -s checkwinsize
 # Notify when jobs finish
 set -o notify
 
+# Set the keybindings
+set -o emacs
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
