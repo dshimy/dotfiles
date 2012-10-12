@@ -16,6 +16,7 @@ set encoding=utf-8              " set file encoding
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 set hidden                      " make background buffers work
+set pastetoggle=<F1>
 
 "" Appearance (font and colors)
 set gfn=Monaco:h12
@@ -48,6 +49,9 @@ set nobackup                    " we don't need backup files
 set noswapfile                  " we don't need swap files either
 
 set wildignore+=*.o,*.obj,.git,.svn,log/**,tmp/**
+
+"" Tagbar
+nmap <F8> :TagbarOpenAutoClose<CR>
 
 "" Map Command-S to save file
 "" This requires mapping the CMD-s key in iTerm to the Hex 0x1b 0x4f 0x51
@@ -112,17 +116,11 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
 
-" Disable those handy arrow keys
-" map <up> <nop>
-" map <down> <nop>
-" map <left> <nop>
-" map <right> <nop>
-" imap <up> <nop>
-" imap <down> <nop>
-" imap <left> <nop>
-" imap <right> <nop>
+"" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" local configuration
+" Local configuration
 if filereadable(expand("~/.vimlocal"))
   source $HOME/.vimlocal
 endif
