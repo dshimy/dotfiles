@@ -51,7 +51,15 @@ set noswapfile                  " we don't need swap files either
 set wildignore+=*.o,*.obj,.git,.svn,log/**,tmp/**
 
 "" Tagbar
-nmap <F8> :TagbarOpenAutoClose<CR>
+map <F8> :TagbarOpenAutoClose<CR>
+
+"" NERDTree
+let NERDTreeQuitOnOpen=1
+nnoremap <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
+nnoremap <Leader>D :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
+map <F9> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+nmap <leader>e :NERDTreeFind<CR>
 
 "" Map Command-S to save file
 "" This requires mapping the CMD-s key in iTerm to the Hex 0x1b 0x4f 0x51
