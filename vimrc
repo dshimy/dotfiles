@@ -5,11 +5,12 @@ call pathogen#infect()
 call pathogen#helptags()
 
 "" line numbers
-set relativenumber 
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+set number
+"set relativenumber 
+":au FocusLost * :set number
+":au FocusGained * :set relativenumber
+"autocmd InsertEnter * :set number
+"autocmd InsertLeave * :set relativenumber
 
 syntax enable                   " enable syntax coloring
 set encoding=utf-8              " set file encoding
