@@ -657,6 +657,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>Default Arrangement Name</key>
+	<string>Arrangement 1</string>
 	<key>Default Bookmark Guid</key>
 	<string>C811D5E2-7724-4038-B32A-537D362FFB75</string>
 	<key>DimBackgroundWindows</key>
@@ -735,15 +737,15 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>831 658 924 485 0 0 2560 1418 </string>
+	<string>262 817 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>702 682 850 706 0 0 2560 1418 </string>
+	<string>1641 143 850 706 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1510 712 850 706 0 0 2560 1418 </string>
+	<string>259 109 850 728 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1228 353 850 706 0 0 2560 1418 </string>
+	<string>868 284 850 706 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>440 121 850 706 0 0 2560 1418 </string>
+	<string>1581 155 850 706 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3017,7 +3019,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-09-11T22:56:34Z</date>
+	<date>2012-10-19T18:27:03Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -3047,11 +3049,13 @@
 	<key>UseCompactLabel</key>
 	<true/>
 	<key>UseLionStyleFullscreen</key>
-	<true/>
+	<false/>
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
 	<string>Lucida Grande</string>
+	<key>Window Arrangements</key>
+	<dict/>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
