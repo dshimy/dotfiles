@@ -23,7 +23,8 @@ set pastetoggle=<F1>
 set gfn=Monaco:h12
 " set background=light
 " colorscheme solarized
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright
+colorscheme grb256
 set shortmess+=I
 
 "" Whitespace
