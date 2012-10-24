@@ -21,10 +21,12 @@ set pastetoggle=<F1>
 
 "" Appearance (font and colors)
 set gfn=Monaco:h12
-" set background=light
-" colorscheme solarized
-" colorscheme Tomorrow-Night-Bright
-colorscheme grb256
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+set background=dark
+colorscheme solarized
 set shortmess+=I
 
 "" Whitespace
@@ -53,12 +55,12 @@ set noswapfile                  " we don't need swap files either
 set wildignore+=*.o,*.obj,.git,.svn,log/**,tmp/**
 
 "" Tagbar
-map <F8> :TagbarOpenAutoClose<CR>
+map <leader>v :TagbarOpenAutoClose<CR>
 
 "" NERDTree
 let NERDTreeQuitOnOpen=1
-nnoremap <Leader>d :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
-nnoremap <Leader>D :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
+nnoremap <Leader>f :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR>
+nnoremap <Leader>F :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR>
 map <F9> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nmap <leader>e :NERDTreeFind<CR>
@@ -74,6 +76,7 @@ au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= l
   \| exe "normal! g`\"" | endif
 
 let g:ctrlp_map = '<leader>t'
+noremap <leader>b :CtrlPBuffer<cr> 
 
 "" switch to the last buffer
 nnoremap <leader><leader> <c-^>
@@ -85,8 +88,9 @@ nnoremap <leader><space> :noh<cr>
 map <leader>c :close<cr> 
 
 "" Navigate the buffer list
-map b :bn<cr>
-map B :bp<cr>
+map <leader>m :bn<cr>
+map <leader>n :bp<cr>
+map <leader>d :bd<cr>
 
 "" Splits ,v and ,h to open new splits (vertical and horizontal)
 nnoremap <leader>v <C-w>v<C-w>l
