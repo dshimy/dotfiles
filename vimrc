@@ -72,6 +72,8 @@ map  <F2> :w<CR>
 au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
   \| exe "normal! g`\"" | endif
 
+let g:ctrlp_map = '<leader>t'
+
 "" switch to the last buffer
 nnoremap <leader><leader> <c-^>
 
@@ -84,6 +86,10 @@ map <leader>c :close<cr>
 "" Navigate the buffer list
 map b :bn<cr>
 map B :bp<cr>
+
+"" Splits ,v and ,h to open new splits (vertical and horizontal)
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>s <C-w>s<C-w>j
 
 "" Easier navigation between split windows
 nnoremap <c-j> <c-w>j
@@ -134,7 +140,6 @@ let g:tagbar_type_markdown = {
     \ 'k:Heading 3'
   \ ]
   \ }
-
 
 "" Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
