@@ -5,12 +5,13 @@
 PLATFORM=`uname`
 
 # ----------------------------------------------------------------------
-# General Bash settings
+# General Bash Settings
 # ----------------------------------------------------------------------
 
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="ls:bg:fg:date:clear:c:history:h"
+export HISTFILE=
 
 # check the window size after each command and, if necessary, update
 shopt -s checkwinsize
@@ -29,12 +30,12 @@ alias "h=history"
 alias "md=mkdir"
 alias "c=clear"
 alias "mroe=less"
+alias "more=less"
 alias "pwd=/bin/pwd"
 alias "cd..=cd .."
 alias "cd...=cd ../.."
 alias "sb=source ~/.bashrc"
 alias "v=mvim"
-
 
 # ----------------------------------------------------------------------
 # Path
