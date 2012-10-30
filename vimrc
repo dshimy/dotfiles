@@ -55,7 +55,7 @@ set noswapfile                  " we don't need swap files either
 set wildignore+=*.o,*.obj,.git,.svn,log/**,tmp/**
 
 "" Tagbar
-map <leader>v :TagbarOpenAutoClose<CR>
+map <leader>r :TagbarOpenAutoClose<CR>
 
 "" NERDTree
 let NERDTreeQuitOnOpen=1
