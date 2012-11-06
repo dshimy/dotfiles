@@ -34,6 +34,7 @@ set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
+set linebreak                   " break some something meaningful
 
 "" Start the status line
 set laststatus=2
@@ -45,6 +46,7 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 set gdefault                    " make all substitutions global
+set modelines=0                 " Disable EOL vim commands
 
 set whichwrap+=<,>,[,]          " make cursor go to the previous line at the beginning
 
@@ -69,6 +71,8 @@ nmap <leader>e :NERDTreeFind<CR>
 "" This requires mapping the CMD-s key in iTerm to the Hex 0x1b 0x4f 0x51
 imap <F2> <C-o>:w<CR>
 map  <F2> :w<CR>
+
+map <F3> :set nowrap! <CR>
 
 " Remember last location in file, but not for commit messages.
 " see :help last-position-jump
@@ -101,6 +105,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+"" Move within a line
+nnoremap j gj
+nnoremap k gk
 
 "" visual shifting (does not exit Visual mode)
 vnoremap < <gv
