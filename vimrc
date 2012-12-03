@@ -50,7 +50,7 @@ set modelines=0                 " Disable EOL vim commands
 
 set whichwrap+=<,>,[,]          " make cursor go to the previous line at the beginning
 
-au FocusLost * :wa              " save when focus is lost
+"au FocusLost * :wa              " save when focus is lost
 set nobackup                    " we don't need backup files
 set noswapfile                  " we don't need swap files either
 
@@ -117,12 +117,14 @@ vnoremap > >gv
 "" Tabularize - align stuff
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a=> :Tabularize /=><CR>
+vmap <Leader>a=> :Tabularize /=><CR>
 nmap <Leader>a: :Tabularize /:<CR>
 vmap <Leader>a: :Tabularize /:<CR>
 nmap <Leader>a:: :Tabularize /:\zs<CR>
 vmap <Leader>a:: :Tabularize /:\zs<CR>
-nmap <Leader>a, :Tabularize /,<CR>
-vmap <Leader>a, :Tabularize /,<CR>
+nmap <Leader>a, :Tabularize /,\zs<CR>
+vmap <Leader>a, :Tabularize /,\zs<CR>
 nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 
