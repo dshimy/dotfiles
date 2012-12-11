@@ -18,6 +18,7 @@ set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 set hidden                      " make background buffers work
 set pastetoggle=<F1>
+set nostartofline               " Preserve the cursor location when buffer switching
 
 "" Appearance (font and colors)
 set gfn=Monaco:h12
