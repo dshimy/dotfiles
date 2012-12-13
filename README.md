@@ -1,6 +1,18 @@
 # Dot Files
 
-This repository is what I use for my dot files.
+This repository is used for my configuration files.  And yes, I use this to synchronize files
+between my computers and servers.  It works pretty well.
+
+## Software
+
+* [Chrome](https://www.google.com/chrome)
+* [iTerm](http://www.iterm2.com/)
+* [Xcode](https://developer.apple.com/xcode/)
+* [git](http://git-scm.com/downloads)
+* [RVM](https://rvm.io/)
+* [Homebrew](http://mxcl.github.com/homebrew/) - brew install ack ctags tree curl source-highlight tmux wget readline
+* [Marked](http://markedapp.com/)
+* [Arq](http://www.haystacksoftware.com/arq/)
 
 ## Installation
 
@@ -10,9 +22,7 @@ cd ~/.dotfiles
 rake install
 ````
 
-Remember to build command-t with the right version of ruby.
-
 ## Dependencies
 
-* ruby 1.8.7 or 1.9.3
+* ruby 1.9.3
 * Rake
