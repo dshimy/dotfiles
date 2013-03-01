@@ -22,12 +22,13 @@ set nostartofline               " Preserve the cursor location when buffer switc
 
 "" Appearance (font and colors)
 set gfn=Monaco:h12
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-set background=dark
-colorscheme solarized
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+" let g:solarized_contrast="high"
+" let g:solarized_visibility="high"
+"set background=dark
+"colorscheme solarized
+colorscheme jellybeans
 set shortmess+=I
 
 "" Whitespace
@@ -81,6 +82,7 @@ au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= l
   \| exe "normal! g`\"" | endif
 
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_max_height = 25
 noremap <leader>b :CtrlPBuffer<cr> 
 
 "" switch to the last buffer
@@ -93,9 +95,16 @@ nnoremap <leader><space> :noh<cr>
 map <leader>c :close<cr> 
 
 "" Navigate the buffer list
-map <leader>m :bn<cr>
-map <leader>n :bp<cr>
+map <C-n> :bn<cr>
+map <C-p> :bp<cr>
 map <leader>d :bd<cr>
+
+"" Emacs-like bindings in insert mode
+imap <C-e> <C-o>$
+
+"" i always, ALWAYS hit ":W" instead of ":w"
+command! Q q
+command! W w
 
 "" Splits ,v and ,h to open new splits (vertical and horizontal)
 nnoremap <leader>v <C-w>v<C-w>l
@@ -137,15 +146,6 @@ set foldlevel=1
 
 "" ZoomWin
 map <leader>z <c-w>o
-
-"" Command-T Configuration
-let g:CommandTMaxFiles=25000
-let g:CommandTMaxHeight=20
-if &term =~ "xterm" || &term =~ "screen"
-  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-endif
 
 "" Add markdown support to tagbar
 let g:tagbar_type_markdown = {
