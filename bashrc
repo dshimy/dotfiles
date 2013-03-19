@@ -120,3 +120,6 @@ if [ -f ~/.bash_local ]; then
   . ~/.bash_local
 fi
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
