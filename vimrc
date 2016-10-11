@@ -6,11 +6,8 @@ call pathogen#helptags()
 
 "" line numbers
 set number
-"set relativenumber 
-":au FocusLost * :set number
-":au FocusGained * :set relativenumber
-"autocmd InsertEnter * :set number
-"autocmd InsertLeave * :set relativenumber
+au InsertEnter * set cul        " enable line highlighting in insert mode
+au InsertLeave * set nocul      " disable line highlighting in insert mode
 
 syntax enable                   " enable syntax coloring
 set encoding=utf-8              " set file encoding
@@ -19,16 +16,11 @@ filetype plugin indent on       " load file type plugins + indentation
 set hidden                      " make background buffers work
 set pastetoggle=<F1>
 set nostartofline               " Preserve the cursor location when buffer switching
+let mapleader=','
 
 "" Appearance (font and colors)
 set gfn=Monaco:h12
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
-" let g:solarized_contrast="high"
-" let g:solarized_visibility="high"
-"set background=dark
-"colorscheme solarized
-colorscheme jellybeans
+colorscheme brogrammer
 set shortmess+=I
 
 "" Whitespace

@@ -27,15 +27,17 @@ set -o emacs
 
 # Some aliases
 alias "h=history"
-alias "md=mkdir"
 alias "c=clear"
 alias "mroe=less"
 alias "more=less"
-alias "pwd=/bin/pwd"
 alias "cd..=cd .."
 alias "cd...=cd ../.."
 alias "sb=source ~/.bashrc"
-alias "v=mvim"
+alias "v=vim"
+
+for f in ~/.bash_completions/*.bash ; do
+  . $f
+done
 
 # ----------------------------------------------------------------------
 # Path
@@ -50,7 +52,6 @@ PATH="$PATH:/usr/local/mysql/bin"
 # ----------------------------------------------------------------------
 
 if [ "$PLATFORM" == 'Darwin' ]; then
-  # EDITOR="mvim -w"
   EDITOR="vim"
 else
   EDITOR="vim"
@@ -59,17 +60,16 @@ export EDITOR
 
 # PAGER
 if test -n "$(command -v less)" ; then
-    PAGER="less -FirSwX"
-    MANPAGER="less -FiRswX"
+  PAGER="less -FirSwX"
+  MANPAGER="less -FiRswX"
 
-    if [ -f "/usr/local/bin/src-hilite-lesspipe.sh" ]; then
-      export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
-      export LESS=' -R '
-    fi
-
+  if [ -f "/usr/local/bin/src-hilite-lesspipe.sh" ]; then
+    export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+    export LESS=' -R '
+  fi
 else
-    PAGER=more
-    MANPAGER="$PAGER"
+  PAGER=more
+  MANPAGER="$PAGER"
 fi
 export PAGER MANPAGER
 
@@ -87,31 +87,34 @@ export LSCOLORS=DxFxCxCxBxexexBxBxDxDx
 
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "("${ref#refs/heads/}") "
+  echo ${ref#refs/heads/}" "
 }
 
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 WHITE="\[\033[0;11m\]"
-PS1="$RED\h \A [\w] $YELLOW\$(parse_git_branch)$RED\$ $WHITE"
+GRAY="\[\033[38;5;244m\]"
+PS1="$RED\A \h $GRAY[$RED\w$GRAY] $YELLOW\$(parse_git_branch)$RED\$ $WHITE"
 
-
-# ----------------------------------------------------------------------
-# RVM for Ruby
-# ----------------------------------------------------------------------
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-function gemdir {
-  if [[ -z "$1" ]] ; then
-    echo "gemdir expects a parameter, which should be a valid RVM Ruby selector"
-  else
-    rvm "$1"
-    cd $(rvm gemdir)
-    pwd
-  fi
+man() {
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+      man "$@"
 }
+
+# ----------------------------------------------------------------------
+# rbenv for Ruby
+# ----------------------------------------------------------------------
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # ----------------------------------------------------------------------
 # Process Local Settings
@@ -119,7 +122,3 @@ function gemdir {
 if [ -f ~/.bash_local ]; then
   . ~/.bash_local
 fi
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
