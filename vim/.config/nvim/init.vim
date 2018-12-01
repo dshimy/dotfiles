@@ -11,6 +11,7 @@ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 syntax on
+set shortmess+=I
 
 let g:lightline = { 'colorscheme': 'nord' }
 let g:nord_underline = 1
