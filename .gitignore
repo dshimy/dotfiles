@@ -1,3 +1,5 @@
 .netrwhist
 .DS_Store
-
+vim/.local/share/nvim/plugged/
+vim/.local/share/nvim/shada/
+vim/.local/share/nvim/swap/
