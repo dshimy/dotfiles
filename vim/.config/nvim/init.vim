@@ -36,7 +36,18 @@ map ; :Files<cr>
 nnoremap <esc> :noh<return><esc>
 
 imap <C-L> <C-R>=strftime("%b %d, %Y")<CR>
+nnoremap <Leader>d :Lex<CR>
+nnoremap <Leader>c :close<CR>
+nnoremap <Leader>o :only<CR>
+nnoremap <Leader>1 1gt<CR>
+nnoremap <Leader>2 2gt<CR>
+nnoremap <Leader>3 3gt<CR>
+nnoremap <Leader>4 4gt<CR>
+nnoremap <Leader>5 5gt<CR>
+nnoremap <C-w><Left> <C-w>h
+nnoremap <C-w><Right> <C-w>l
 
+" 
 " Ignore Acronyms during spell check
 syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
 

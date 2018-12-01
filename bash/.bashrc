@@ -5,8 +5,9 @@ EDITOR=nvim
 alias h="history"
 alias k="kubectl"
 alias c="clear"
-alias v="vim"
+alias v="nvim"
 alias vim="nvim"
+alias dc="docker-compose"
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
