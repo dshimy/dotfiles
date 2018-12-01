@@ -1,28 +1,28 @@
-# Dot Files
+# Darian's Dotfiles
 
-This repository is used for my configuration files.  And yes, I use this to synchronize files
-between my computers and servers.  It works pretty well.
+This repository is used for my configuration files. And yes, I use this to synchronize files between my computers and servers.  It works pretty well.  This is really just for me, but if you are interested, here you go.
 
-## Software
+## Getting Started
 
-* [Chrome](https://www.google.com/chrome)
-* [iTerm](http://www.iterm2.com/)
-* [Xcode](https://developer.apple.com/xcode/)
-* [git](http://git-scm.com/downloads)
-* [RVM](https://rvm.io/)
-* [Homebrew](http://mxcl.github.com/homebrew/) - brew install ack ctags tree curl source-highlight tmux wget readline
-* [Marked](http://markedapp.com/)
-* [Arq](http://www.haystacksoftware.com/arq/)
+First, install Stow:
 
-## Installation
+```sh
+brew install stow
+```
 
-````
-git clone git://github.com/dshimy/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-rake install
-````
+Then checkout the repo and run the install script:
 
-## Dependencies
+```sh
+git checkout git@github.com:dshimy/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles && ./install.sh
+```
 
-* ruby 1.9.3
-* Rake
+## MIT License 
+
+Copyright 2018 Darian Shimy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
