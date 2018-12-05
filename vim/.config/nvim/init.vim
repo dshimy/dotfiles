@@ -47,9 +47,12 @@ nnoremap <Leader>5 5gt<CR>
 nnoremap <C-w><Left> <C-w>h
 nnoremap <C-w><Right> <C-w>l
 
-" 
+" Set the cursor to the last edited position 
+autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 " Ignore Acronyms during spell check
 syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
 
 " Align tables
 au FileType markdown vmap <Leader>t :EasyAlign*<Bar><Enter>
+
