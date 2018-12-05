@@ -1,6 +1,7 @@
 PLATFORM=`uname`
-TERM=xterm-256color
-EDITOR=nvim
+export TERM=xterm-256color
+export EDITOR=nvim
+export KUBE_EDITOR=nvim
 
 alias h="history"
 alias k="kubectl"
