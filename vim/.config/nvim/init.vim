@@ -47,6 +47,9 @@ nnoremap <Leader>5 5gt<CR>
 nnoremap <C-w><Left> <C-w>h
 nnoremap <C-w><Right> <C-w>l
 
+" Remove whitespace a the end of the line
+autocmd BufWritePre * %s/\s\+$//e
+
 " Set the cursor to the last edited position 
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
