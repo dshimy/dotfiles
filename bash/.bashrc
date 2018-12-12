@@ -9,6 +9,7 @@ alias c="clear"
 alias v="nvim"
 alias vim="nvim"
 alias dc="docker-compose"
+alias n="cd ~/Dropbox && nvim scratch.md && cd -"
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -29,6 +30,7 @@ export PATH="$HOME/google-cloud-sdk/bin:$PATH"
 eval "$(rbenv init -)"
 
 export PATH="$HOME/bin:$PATH:$HOME/go/bin"
+export PATH="$PATH:/usr/local/lib/node_modules/node/bin/mdpdf"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion

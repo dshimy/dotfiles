@@ -1,0 +1,74 @@
+{
+	"added_words":
+	[
+		"Roadmap",
+		"Admin",
+		"online",
+		"unenrolled",
+		"Tx",
+		"https",
+		"http",
+		"admin",
+		"admins",
+		"Facebook",
+		"cvc",
+		"csv",
+		"tx",
+		"datetime"
+	],
+	"auto_complete": false,
+	"color_scheme": "Packages/Theme - One Dark/One Dark.tmTheme",
+	"copy_with_empty_selection": false,
+	"detect_indentation": false,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		".byebug_history",
+		"Icon*"
+	],
+	"folder_exclude_patterns":
+	[
+		"tmp",
+		"log",
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
+	"font_face": "Source Code Pro",
+	"font_size": 14,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		120
+	],
+	"save_on_focus_lost": true,
+	"tab_size": 2,
+	"theme": "One Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

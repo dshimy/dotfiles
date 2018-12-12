@@ -1,0 +1,28 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AlignTab",
+		"ApplySyntax",
+		"BracketGuard",
+		"Color Highlighter",
+		"Dockerfile Syntax Highlighting",
+		"ERB Snippets",
+		"FindKeyConflicts",
+		"GitGutter",
+		"MacDown App Menu",
+		"Markdown Table Formatter",
+		"One Dark Color Scheme",
+		"Open URL",
+		"Package Control",
+		"SCSS",
+		"SqlBeautifier",
+		"SublimeERB",
+		"Theme - Brogrammer",
+		"Theme - Darkmatter",
+		"Theme - One Dark"
+	]
+}
