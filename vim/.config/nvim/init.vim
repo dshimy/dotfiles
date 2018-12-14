@@ -24,6 +24,7 @@ set number
 set cursorline
 set mouse=a
 set cb=unnamed
+set hidden
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -47,10 +48,13 @@ nnoremap <Leader>5 5gt<CR>
 nnoremap <C-w><Left> <C-w>h
 nnoremap <C-w><Right> <C-w>l
 
+" Save files on autofocus change
+au FocusLost * :wa
+
 " Remove whitespace a the end of the line
 autocmd BufWritePre * %s/\s\+$//e
 
-" Set the cursor to the last edited position 
+" Set the cursor to the last edited position
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " Ignore Acronyms during spell check
