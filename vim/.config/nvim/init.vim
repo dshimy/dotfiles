@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gabrielelana/vim-markdown'
 Plug 'junegunn/vim-easy-align'
 Plug 'arcticicestudio/nord-vim'
+Plug 'itspriddle/vim-marked'
 
 call plug#end()
 
