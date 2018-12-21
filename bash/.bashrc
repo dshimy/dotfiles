@@ -10,6 +10,7 @@ alias v="nvim"
 alias vim="nvim"
 alias dc="docker-compose"
 alias n="cd ~/Dropbox && nvim scratch.md && cd -"
+alias vkey="grep map ~/.config/nvim/init.vim"
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad

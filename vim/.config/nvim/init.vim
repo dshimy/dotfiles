@@ -21,13 +21,13 @@ let g:nord_italic_comments = 1
 let g:nord_uniform_status_lines = 1
 colorscheme nord
 
-set number
-set cursorline
-set mouse=a
-set cb=unnamed
-set hidden
-set tabstop=2
-set shiftwidth=2
+set number               " Show line numbers
+set cursorline           " Highlight the current line
+set mouse=a              " Use the mouse
+set cb=unnamed           " Use the system clipboard
+set hidden               " Allow switching unsaved buffers
+set tabstop=2            " Set how many spaces use a tab
+set shiftwidth=2         " Set how many columns are used when indenting
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
