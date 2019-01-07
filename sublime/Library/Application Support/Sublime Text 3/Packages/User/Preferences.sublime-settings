@@ -14,7 +14,29 @@
 		"cvc",
 		"csv",
 		"tx",
-		"datetime"
+		"datetime",
+		"wildcard",
+		"uncheck",
+		"spam",
+		"unsubscribe",
+		"app",
+		"br",
+		"Screenshot",
+		"Admin's",
+		"Offline",
+		"checkbox",
+		"checkboxes",
+		"Mastercard",
+		"fundraiser",
+		"chargeback",
+		"futurefund",
+		"offline",
+		"thon",
+		"pre",
+		"workflow",
+		"thons",
+		"realtime",
+		"cancelled"
 	],
 	"auto_complete": false,
 	"color_scheme": "Packages/Theme - One Dark/One Dark.tmTheme",
@@ -60,7 +82,16 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"3024 Color Scheme",
 		"Vintage"
+	],
+	"ignored_words":
+	[
+		"P2",
+		"Un",
+		"inboxes",
+		"signup",
+		"un"
 	],
 	"rulers":
 	[

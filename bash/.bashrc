@@ -2,6 +2,7 @@ PLATFORM=`uname`
 export TERM=xterm-256color
 export EDITOR=nvim
 export KUBE_EDITOR=nvim
+export GPG_TTY=$(tty)
 
 alias h="history"
 alias k="kubectl"

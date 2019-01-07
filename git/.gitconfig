@@ -29,8 +29,6 @@
 	lg  = log -n 10 --no-merges --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
 [mergetool]
 	keepBackup = true
-[help]
-	autocorrect = 1
 [push]
 	default = simple
 [filter "lfs"]
@@ -40,3 +38,5 @@
 	required = true
 [core]
 	editor = nvim
+[commit]
+	gpgsign = true
