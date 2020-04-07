@@ -12,7 +12,7 @@ export KUBE_EDITOR=nvim
 
 # Handy Aliases
 #
-alias ls="gls --color=always"
+alias ls="ls -G"
 alias h="history"
 alias k="kubectl"
 alias c="clear"
