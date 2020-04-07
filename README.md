@@ -4,18 +4,35 @@ This repository is used for my configuration files. And yes, I use this to synch
 
 ## Getting Started
 
-First, install Stow:
+First, install dependencies:
 
 ```sh
 brew install stow
+brew install rbenv
+npm install -g spaceship-prompt
 ```
 
-Then checkout the repo and run the install script:
+Install a powerline font and use it in your terminal:
+
+- https://github.com/powerline/fonts
+
+Then checkout the `dotfiles` repo and run the install script:
 
 ```sh
 git checkout git@github.com:dshimy/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles && ./install.sh
 ```
+
+## Terminal Colors
+
+Customize the terminal with some colors.
+
+- https://github.com/arcticicestudio/nord-iterm2
+- https://github.com/arcticicestudio/nord-terminal-app
+
+## Post Installation Tasks
+
+- https://cloud.google.com/sdk/docs/downloads-interactive
 
 ## MIT License
 
