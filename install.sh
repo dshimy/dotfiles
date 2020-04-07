@@ -9,4 +9,4 @@ stow -v ruby
 stow -v sqlite
 stow -v tmux
 stow -v vim
-stow -v sublime
+stow -v zsh
