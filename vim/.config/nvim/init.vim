@@ -36,6 +36,7 @@ set cb=unnamed           " Use the system clipboard
 set hidden               " Allow switching unsaved buffers
 set tabstop=2            " Set how many spaces use a tab
 set shiftwidth=2         " Set how many columns are used when indenting
+set nowrap
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -60,6 +61,7 @@ nnoremap <Leader>2 2gt<CR>
 nnoremap <Leader>3 3gt<CR>
 nnoremap <Leader>4 4gt<CR>
 nnoremap <Leader>5 5gt<CR>
+nnoremap <Leader>b :bnext<CR>
 nnoremap <C-w><Left> <C-w>h
 nnoremap <C-w><Right> <C-w>l
 
