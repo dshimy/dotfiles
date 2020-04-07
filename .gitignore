@@ -4,9 +4,3 @@ vim/.local/share/nvim/plugged/
 vim/.local/share/nvim/shada/
 vim/.local/share/nvim/swap/
 vim/.config/nvim/spell/
-Package Control.last-run
-Package Control.ca-list
-Package Control.ca-bundle
-Package Control.system-ca-bundle
-Package Control.cache/
-Package Control.ca-certs/
