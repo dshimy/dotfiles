@@ -38,5 +38,8 @@
 	required = true
 [core]
 	editor = nvim
+	excludesfile = /Users/dshimy/.gitignore
 [commit]
 	gpgsign = true
+[merge]
+	ff = true
